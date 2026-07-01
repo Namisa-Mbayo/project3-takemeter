@@ -6,23 +6,27 @@ The community I chose was the reality TV show, Real Housewives. They have a very
 
 | Label | Definition | Examples |
 | - | - | - |
-| `viewer_reaction` | A post that expresses an emotional or personal response about a scene, episode, reunion, trailer, reveal, or on-screen moment without a deeper argument. | “This scene stressed me out.” / “That dinner scene was absolute chaos. I had to rewind.” |
+| `viewer_reaction` | A post that expresses an emotional personal response about a scene, episode, reunion, trailer, reveal, cast member, or on-screen moment without a deeper argument. | “This scene stressed me out.” / “That dinner scene was absolute chaos. I had to rewind.” |
 | `character_judgment` | A post that evaluates a cast member’s personality, behavior, motives, morality, likability, relationships, or role. | “She only apologized because she knew the cameras were on her.” / “He’s trying way too hard to look like the reasonable one this season.” |
 | `storyline_analysis` | A post that explains why something happened, how a conflict or relationship dynamic works, or how production, off-screen context, social media, or prior episodes shape the viewer’s understanding. | “The edit has been setting her up as the villain for weeks by cutting from her confessionals directly into the other women reacting negatively.” / “This conflict feels less about the dinner argument and more about the alliance shift that started after the cast trip.” |
 
-**Decision rule:** If the post  expresses a feeling about a scene, episode, reunion, trailer, or on-screen moment, label it `show_reaction`. If the post makes an evaluative claim about a cast member's actions, personality, or other traits, label it `character_judgment`. If the post mainly explains why something happened, how a dynamic works, or how editing choices/storyline context influence how viewers understand events, label it `storyline_analysis`. The post may include opinions, but the main purpose is interpretation. When multiple labels seem possible, choose the label that best describes the post’s main purpose.
+**Decision rule:** If the post  expresses a feeling about a scene, episode, reunion, trailer, cast member, or on-screen moment, label it `viewer_reaction`. If the post makes an evaluative claim about a cast member's actions, personality, or other traits, label it `character_judgment`. If the post mainly explains why something happened, how a dynamic works, or how editing choices/storyline context influence how viewers understand events, label it `storyline_analysis`. The post may include opinions, but the main purpose is interpretation. When multiple labels seem possible, choose the label that best describes the post’s main purpose.
 
 ## Hardest Edge Cases
 
-The hardest edge case will be `character_judgment` vs. `analysis`   
-*Example:* “She only apologized because she knew the cameras were on her.”   
-This could be labeled `character_judgment` because it evaluates the cast member’s sincerity and motives. However, if the post expands on that claim using specific scenes, behavior, editing choices, or group dynamics, it should become `storyline_analysis`.
+### Edge Case 1: `character_judgment` vs. `storyline_analysis`
 
-A second possible edge case is `show_reaction` vs. `character_judgment`. If a post mostly reacts to a moment, label it `show_reaction`. If it uses that moment to evaluate a cast member’s personality or motives, label it `character_judgment`.
+*Example:* “She only apologized because she knew the cameras were on her.”   
+This could be labeled `character_judgment` because it evaluates the cast member’s sincerity and motives. However, if the post expands on that claim using specific scenes, editing choices, group dynamics, or off-screen information, it should become `storyline_analysis`.
+
+### Edge Case 2: `viewer_reaction` vs. `character_judgment`
+
+*Example:* “That scene was so uncomfortable. She really cannot handle anyone disagreeing with her.”
+The first sentence is a viewer reaction, but the second sentence evaluates the cast member’s behavior and personality. I would label this `character_judgment` because the main purpose is to make a claim about the cast member, not just express an emotional response.
 
 ## Data Collection Plan
 
-I will collect examples from the Real Housewives Reddit community, r/BravoRealHousewives. I will collect posts and comments from various discussion threads, collecting at least 200 examples total. Since I have 4 labels, I will aim for about 50 examples per label. If one label is underrepresented, I will search for threads where that label is more common.
+I will collect examples from the Real Housewives Reddit community, r/BravoRealHousewives. I will collect posts and comments from various discussion threads, collecting at least 200 examples total. Since I have 3 labels, I will aim for about 65-70 examples per label. If one label is underrepresented, I will search for threads where that label is more common.
 
 ## Evaluation Metrics
 
